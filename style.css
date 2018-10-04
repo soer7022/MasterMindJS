@@ -1,0 +1,86 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    background: #FF851B;
+    flex-direction: column;
+}
+
+.game {
+    height: auto;
+    width: 500px;
+    background: #FFF;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+}
+
+.game__row {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 5px;
+}
+
+.game__correct {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 5px;
+    align-items: center;
+    justify-items: center;
+}
+
+.game__correct > div {
+    height: 10px;
+    width: 10px;
+    background: grey;
+    border-radius: 100px;
+    border: 1px solid black;
+}
+
+.game__guess {
+    height: 40px;
+    width: 100%;
+    position: relative;
+    border: 1px solid gray;
+}
+
+.game__picker {
+    position: absolute;
+    padding: 5px;
+    background: lightgray;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 5px;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    display: none;
+}
+
+.game__picker--show {
+    display: grid;
+}
+
+.game__picker:before {
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-bottom: 10px solid lightgray;
+}
+
+.game__picker > div {
+    height: 20px;
+    width: 20px;
+}
