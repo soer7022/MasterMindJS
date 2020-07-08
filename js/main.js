@@ -10,7 +10,6 @@ $(function () {
         colors[Math.floor(Math.random() * colors.length)],
         colors[Math.floor(Math.random() * colors.length)],
         colors[Math.floor(Math.random() * colors.length)]];
-    secret = ["rgb(255, 0, 0)", "rgb(255, 255, 0)", "rgb(0, 0, 255)", "rgb(0, 128, 0)"];
 
     function updateGuessCounter() {
         guessInfo.text('Current guess: ' + guesses + " / " + maxGuesses);
